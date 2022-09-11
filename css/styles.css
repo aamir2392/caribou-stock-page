@@ -1,0 +1,214 @@
+/* navbar */
+.navbar {
+    padding: 0 7% !important;
+    position: relative;
+}
+
+.nav-left-link {
+    padding: 2px 5px;
+}
+
+.nav-left-link:hover {
+    color: #e20a14;
+}
+
+.active-link {
+    color: white !important;
+    border-left: 5px solid #e20a14;
+}
+
+.navbar-brand-container {
+    position: absolute;
+    width: 155px;
+    left: 50%;
+    top: 0;
+    margin-left: -77.5px;
+}
+
+/* ----------------------------------- title ----------------------------------- */
+a
+    {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover
+    {
+      color: black;
+    }
+#title-section
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.title-img-container
+{
+    position: relative;
+}
+
+/* the image itself */
+
+.title-img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* the shadow on each of the img */
+
+.shadow-on-image
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+
+/* container that holds title text */
+
+.title-txt-container
+{
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 7%;
+}
+
+/* title heading */
+
+.title-heading
+{
+    font-size: 27px;
+    font-weight: 700;
+}
+
+/* text below title heading */
+
+.title-description
+{
+    font-size: 12.5px;
+    font-weight: 500;
+}
+
+/* button in the title section */
+
+/* button in the title section */
+
+.title-btn
+{
+    height: 45px;
+    width: 290px;
+    border: none;
+    border-radius: 5px;
+
+    background : linear-gradient(90deg, #E20914, #71050A);
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.title-btn:hover
+     {
+        background:  #E20914 ;
+     }
+    
+/* ---------- content -------------*/
+#content{
+    padding: 0.8em 2.5em;
+  }
+  #content > p {
+    text-align: center; 
+    font-family: 'poppins'; 
+    font-size: 30px; 
+    color: #707070;
+  }
+  .content-imgs-container{
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0.4em;
+
+    padding: 0.8em 0;
+  }
+  .content-imgs-container > div > div > img {
+    height: 100%;
+    width: 100% !important;
+  }
+  .row-with-3-imgs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.4em;
+  }
+  .row-with-4-imgs{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr;
+    column-gap: 0.4em;
+  }
+
+
+/* the styling of the two images in page menu */
+.premium-img-container {
+    overflow: hidden;
+}
+
+.premium-img-container > img {
+    transition: transform 0.3s ease-in;
+    
+
+}
+
+.premium-img-container > img:hover {
+    transform-origin: right;
+    transform-style: flat;
+    transform: scale(1.2);
+}
+
+/* ---------------------------- Footer ------------------------------- */
+ 
+    footer {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 2em 6em;
+    }
+
+    footer>div {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    footer>div:nth-child(1) {
+        padding: 0 1em;
+        flex-grow: 1.5;
+    }
+
+    footer>div:nth-child(2),
+    footer>div:nth-child(3),
+    footer>div:nth-child(4) {
+        padding: 1.5em 3em;
+    }
+
+    footer>div>ul {
+        line-height: 1.1;
+    }
+
+    .footer-link {
+        color: #afafaf;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .footer-list-item {
+        text-align: left !important;
+    }
+
+    .footer-link:hover {
+        color: #e20a14;
+    }
+
+
+    

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page menu image</title>
+    <!-- 1. Bootstrap -->
+    <!-- 2. font-awesome -->
+    <!-- 3. css styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/2b02b8da95.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+</head>
+<style>
+
+    
+  html,body{
+    width: 100%;
+  }
+    /* title section styling */
+
+    #title-section
+    {
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    /* the container that holds the image */
+
+    .title-img-container
+    {
+      height: 50vh;
+    }
+    
+
+    /* container that holds title text */
+
+    .title-txt-container
+    {
+      
+        height: 180px;
+        width: 50%;
+        text-align: left;
+        position: absolute;
+        margin-top: -90px;
+        top: 41%;
+        left: 5%;
+    }
+
+    /* title heading */
+
+    .title-heading
+    {
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    /* text below title heading */
+
+    .title-description
+    {
+        font-size: 12.5px;
+        font-weight: 500;
+    }
+
+    
+
+    /* the section that contains info of premium photos */
+
+    #premium-photos-section
+    {   
+        font-family: 'poppins', sans-serif;
+        padding: 2em 5% 3em 5%;
+        margin-top: 0.5em;
+        background-color: #F5F5F5;
+    }
+
+    /* the headings at the start of premium and categories section */
+
+    .premium-photos-heading , .categories-photos-heading
+    {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+
+    /* the text below the heading of premium and categories section */
+
+    .premium-photos-description, .categories-photos-description
+    {
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+    /* container that holds two sample pics */
+
+    .premium-photos-sample-container
+    {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap; 
+        gap: 0.8em;
+
+    }
+    /* the container that holds text below each img */
+    .premium-img-txt-container
+    {
+        padding-top: 1.2em;
+    }
+
+    /* heading under each image */
+
+    .img-heading
+    {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    /* text below each image heading */
+
+    .img-description
+    {
+        font-size: 10px;
+        font-weight: 500;
+        color:#707070 ;
+    }
+    
+    /* section pf categories that contains image grid */
+
+    #categories
+    {
+        background-color: #FFFFFF;
+        padding: 2em 5% 3em 5%;
+    }
+
+    /* for making the opacity on images */
+
+    #categories > .categories-img-container> div> a >img:hover
+    {
+        opacity: 0.7;
+    }
+
+    /* container that holds all the images */
+    
+    .categories-img-container
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    /* container below each image in categories section that holds text  */
+    .categories-img-txt-container
+    {
+        padding-top: 0.5em;
+    }
+
+    /* ----------------------------media query------------------------------  */
+    @media screen and (max-width: 991px) {
+      .navbar
+      {
+        height: 52px;
+      }  
+    }
+
+    @media screen and (min-width: 480px) and (max-width:768px)  {
+      
+      .title-img-container
+        {
+          height: 45vh !important;
+        }
+
+        .title-txt-container
+        {
+          width: 88%;
+          top: 39%;
+          left: 5%;
+        }
+        .title-heading
+        {
+          font-size: 26px;
+        }
+
+        .title-description
+        {
+          font-size: 15px;
+        }
+
+        #premium-photos-section
+        {
+          padding: 1em 5% 0.2em 5%;
+        }
+
+        .premium-photos-heading , .categories-photos-heading
+        {
+        font-size: 21px;
+        }
+
+        .premium-photos-description, .categories-photos-description
+        {
+          font-size: 13.5px;
+        }
+
+        .premium-img-txt-container
+        {
+          padding-top: 0.5em;
+        }
+
+        .img-heading
+        {
+          font-size: 15.5px;
+        }
+
+        .img-description
+        {
+          font-size: 12.5px;
+        }
+
+        #categories
+        {
+            
+            padding: 0.7em 5% 1.5em 5%;
+        }
+
+        .categories-img-container
+        {
+          grid-template-columns: repeat(3,1fr);
+        }
+
+        footer {
+          padding: 1em 2em;
+        }
+
+        footer>div:nth-child(2),
+        footer>div:nth-child(3) {
+          display: none;
+      }
+
+    }
+
+    @media screen and (max-width:480px) {
+      body, html{
+        width: 100%;
+      }
+
+      .title-img-container
+        {
+          height: 30vh !important;
+        }
+
+        .title-txt-container
+        {
+          text-align: center;
+          width: 100% !important;
+          top: 40%;
+          left: 0.5%;
+          padding: 0 7px;
+        }
+
+        .title-heading-holder
+        {
+          padding-bottom: 0.2em !important;
+        }
+
+        .title-heading
+        {
+          font-size: 18px;
+        }
+
+        .title-description
+        {
+          font-size: 13px;
+          line-height: 1.7;
+        }
+
+        #premium-photos-section
+        {
+          padding: 0.7em 7% 0 7% !important;
+        }
+
+        .premium-photos-heading , .categories-photos-heading
+        {
+          font-size: 17px;
+        }
+
+        .premium-photos-description, .categories-photos-description
+        {
+          font-size: 11.5px;
+        }
+        .premium-img-txt-container
+        {
+          padding-top: 0.3em;
+        }
+        #categories
+        {
+            padding: 0.7em 7% 1em 7%;
+        }
+        .categories-img-container
+        {
+          grid-template-columns: repeat(2,1fr);
+        }
+
+        footer
+        {
+          display: none;
+        }
+
+    }
+
+</style>
+<body>
+    
+
+
+</body>
+
+     <!-- navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div id="navbar-toggler">
+        <div class="navbar-toggler-bar"></div>
+        <div class="navbar-toggler-bar"></div>
+        <div class="navbar-toggler-bar"></div>
+      </div>
+      <!-- links on left side -->
+      <div class="nav-left-links-container collapse navbar-collapse" id="toggler-target">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-left-link">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-left-link">Images</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-left-link">Illustrations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-left-link">Figurants</a>
+          </li>
+        </ul>
+        <div class="nav-right-items-container navbar-expand-sm ms-auto">
+          <ul class="navbar-nav" style="display: flex; align-items: center">
+            <li class="nav-item" style="line-height: 1.7">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-bolt"></i> Terifs</a>
+            </li>
+            <li class="nav-item" style="line-height: 1.7">
+              <a href="#" class="nav-link"
+                ><i class="fa-solid fa-cloud-arrow-up"></i> Vendre</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <img src="images/instant-shoot.png" alt="" height="35px" width="35px">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- brand image -->
+      <div class="navbar-brand-container">
+        <img class="img-fluid" src="images/brand-img.png" alt="Caribou Stock" />
+      </div>
+
+      <!-- user on right for small screens -->
+      <a href="#" class="nav-link" style="color: #fff; font-size: 26px; display: none;">
+        <img src="images/instant_shoot.png" alt="" height="30px" width="30px">
+      </a>
+    </nav>
+    
+      <!-- title section -->
+
+      <section id="title-section">
+        <div class="title-img-container">
+            
+            <img class="title-img img-fluid" src="images/title-page-menu.png" alt="">
+            <div class="title-txt-container">
+              <div class="title-heading-holder" style="padding-bottom: 0.7em;">
+                  <a href=""></a><span class="title-heading">Explorez des milliers d’images libres de droits</span>
+              </div> 
+                  <p class="title-description">Vous avez besoin d’une image qui attire l’œil et que vous pouvez utiliser à plusieurs reprises sur différentes plates-formes ? Pour rester dans un cadre légal, vous avez besoin d’une image libre de droits. Caribou Stock s’occupe de vous. Grâce à des milliers de contributeurs qui ajoutent régulièrement leurs contenus visuels de haute qualité à notre bibliothèque,</p>
+                  <button class="title-btn">Trouvez votre abonnement</button>    
+
+          </div>
+          </div>
+       
+
+      </section>
+
+      <!-- id="premium-photos-section" 
+        class="premium-photos-sample-container"
+        class="premium-img-container"
+        class="premium-img-container"
+        -->
+      <section id="premium-photos-section">
+
+        <span class="premium-photos-heading">Photos premium et collections organisées</span>
+        <p class="premium-photos-description">Explorez des actifs d’actions uniques d’artistes de classe mondiales</p>
+        
+        <div class="premium-photos-sample-container">
+            <div>
+                <div class="premium-img-container">
+                    <img class="img-fluid" src="images/premium-img-1.png" style="object-fit: cover;">   
+                </div>
+                <div class="premium-img-txt-container">
+                    <a href=""><span class="img-heading">Nouveau image récentes</span></a>
+                    <a href=""><p class="img-description">Retrouvez tous les images récemment ajoutées par nos contributeurs</p>
+                    </a>
+                  </div>
+            </div>
+        
+             <div>
+                <div class="premium-img-container">
+                    <img class="img-fluid" src="images/premium-img-2.png" style="object-fit: cover;">
+                </div>
+                <div class="premium-img-txt-container">
+                    <a href=""><span class="img-heading" >Nos illustrations</span></a>
+                    <a href=""><p class="img-description">Le sous-titre de la catégorie donnée</p></a>
+                </div>
+    
+             </div>
+
+
+      </section>
+
+      <!-- categories section -->
+
+      <section id="categories">
+        <div class="categories-header-container">
+            <span class="categories-photos-heading">Explorez les catégories populaires de photos libres de droits</span>
+            <p class="categories-photos-description">Explorez les photos populaires pour trouver l’option parfaite pour vous</p>
+        </div>
+
+
+
+        <div class="categories-img-container">
+             <div ><a href="#"><img class="img-fluid" src="images/image-1.png" alt=""></a>
+            <div class="categories-img-txt-container">
+                <a href=""><span class="img-heading">Business & Entreprise</span>
+                 <p class="img-description">Images issues du monde des affaires et de la finance</p></a>
+            </div>
+        </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-2.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Famille</span>
+                     <p class="img-description">Images représentant des familles en tout genre</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-3.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Enseignement</span>
+                     <p class="img-description">De l’école primaire au lycée en passant par l’université</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-4.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Sport</span>
+                     <p class="img-description">Nos images représentants des sportifs</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-5.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Fête</span>
+                     <p class="img-description">Découvrez les différentes fêtes de l’Océan Indien</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-6.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Manger & Boire </span>
+                     <p class="img-description">Des images qui donnent envie de manger et déguster</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-7.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Réseaux sociaux</span>
+                     <p class="img-description">Les réseaux sociaux nous réunissent</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-8.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Voyage</span>
+                     <p class="img-description">Découvrir de nouvelles destinations</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-9.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Profession</span>
+                     <p class="img-description">Le monde du travail est vaste et les possibilités aussi</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-10.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Nature & Paysage</span>
+                     <p class="img-description">La nature nous offre divers paysages</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-11.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Portrait</span>
+                     <p class="img-description">Un visage raconte souvent une histoire</p></a>
+                </div>
+            </div>
+             <div><a href="#"><img class="img-fluid" src="images/image-12.png" alt=""></a>
+                <div class="categories-img-txt-container">
+                    <a href=""><span class="img-heading">Beauté</span>
+                     <p class="img-description">Dans chacun de nous, il y a un petit grain de beauté</p></a>
+                </div>
+            </div>
+             
+        </div>
+
+        
+
+      </section>
+
+      <!-- Footer section -->
+
+      <section title="footer">
+        <footer>
+          <div>
+            <div style="height: 60px; width: 120px">
+              <img class="img-fluid" src="images/footer-brand-img.jpg" alt="" style="object-fit: cover;"/>
+            </div>
+            <p style="font-size: 11px; text-align: left">
+              Caribou Stock est une banque d’images et d’illustrations numériques
+              de L’Ocean Indien , proposant une vision réaliste et contemporaine
+              d’images exclusivement africaines, que vous soyez de Mayotte à
+              Madagascar en passant par les Comores à la Reunion Caribou Stock
+              sera pour vous un révélateur de mémoire avec ces images qui nous
+              ressemble et nous Rassemblent.
+            </p>
+          </div>
+          <div>
+            <p style=" font-family: 'Montserrat'; margin-bottom: 5px; text-align: left;">
+              A propos de
+            </p>
+            <ul style="list-style-type: none; padding: 0">
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Conditionnas général de vente</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Conditions d’utilisateur</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Politique de confidentialité</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">A propos</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Cookie</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Contactez - nous</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin-bottom: 5px; text-align: left">Catégories</p>
+            <ul style="list-style-type: none; padding: 0">
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Nature & Paysage</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Sport</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Voyage</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Famille</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Enseignement</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Portrait</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Profession</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-link">Business & Enterprise</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin-bottom: 5px; text-align: left">Liens</p>
+            <div
+              style="
+                font-size: smaller;
+                line-height: 1;
+                color: #afafaf;
+                text-align: left;
+              "
+            >
+              <ul style="list-style-type: none; padding: 0">
+                <li class="footer-list-item">
+                  <a href="#" class="footer-link"
+                    >Conditionnas général de vente</a
+                  >
+                </li>
+                <li class="footer-list-item">
+                  <a href="#" class="footer-link">Conditions d’utilisateur</a>
+                </li>
+              </ul>
+              <button>Drop Down for location</button>
+              <p style="margin: 2em 0; color: white; text-align: left">
+                <i class="fa-brands fa-square-facebook fa-2x"></i>
+                <i class="fa-brands fa-square-instagram fa-2x"></i>
+                <i class="fa-brands fa-square-youtube fa-2x"></i>
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </section>
+      
+</html>
